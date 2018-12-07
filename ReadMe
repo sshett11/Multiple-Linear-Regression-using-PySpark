@@ -1,7 +1,5 @@
 **Implementing Multiple Linear Regression using Spark**
 
-Name & Student id - Suraj M Shetty / 801021051
-
 Operating system used - Linux Mint 19 Cinnamon
 
 Programming Language - Python 2.7.15
@@ -26,7 +24,6 @@ hadoop fs -put <yxlin.csv/ yxlin2.csv>  /user/cloudera/spark/
 4. Run the program by executing following commands
 spark-submit linreg.py /user/cloudera/spark/yxlin.csv > yxlin.out
 spark-submit linreg.py /user/cloudera/spark/yxlin2.csv > yxlin2.out
-
 
 
 *** STEPS FOR LINUX/UBUNTU with spark,python with numpy & hadoop installed ***
