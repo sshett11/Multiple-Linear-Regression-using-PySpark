@@ -1,0 +1,42 @@
+**Implementing Multiple Linear Regression using Spark**
+
+Name & Student id - Suraj M Shetty / 801021051
+
+Operating system used - Linux Mint 19 Cinnamon
+
+Programming Language - Python 2.7.15
+
+IDE Used for developing - Pycharm Community edition
+
+Spark Version - 1.6.3
+
+***STEPS FOR CLOUDERA with pip,numpy installed ***
+
+1. Copy linreg.py to clouderaVM
+
+2. Copy the yxlin.csv and yxlin2.csv input files by doing following steps
+sudo su hdfs
+hadoop fs -mkdir /user/cloudera
+hadoop fs -chown cloudera /user/cloudera
+exit
+sudo su cloudera
+hadoop fs -mkdir /user/cloudera/spark 
+hadoop fs -put <yxlin.csv/ yxlin2.csv>  /user/cloudera/spark/
+
+4. Run the program by executing following commands
+spark-submit linreg.py /user/cloudera/spark/yxlin.csv > yxlin.out
+spark-submit linreg.py /user/cloudera/spark/yxlin2.csv > yxlin2.out
+
+
+
+*** STEPS FOR LINUX/UBUNTU with spark,python with numpy & hadoop installed ***
+
+1. Open my project folder (sshett11) inside the TERMINAL -
+
+2. To check { linreg.py, yxlin.csv, yxlin2.csv } is present or not
+ls -l
+
+3. Execute the python program in spark shell and send the output to .out file (output files will be present in the current project directory once executed)
+spark-submit linreg.py yxlin.csv > yxlin.out
+spark-submit linreg.py yxlin2.csv > yxlin2.out
+
